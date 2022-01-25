@@ -4,7 +4,20 @@ This repository containing script which allow [Loki](https://github.com/Neo23x0/
 
 ## What is Loki?
 
-From [author's webpage](https://github.com/Neo23x0/Loki):
+From [author's webpage](https://www.nextron-systems.com/loki/):
+
+```
+LOKI is a free and simple IOC scanner, a complete rewrite of main analysis modules of our full featured APT Scanner THOR. IOC stands for „Indicators of Compromise“. These indicators can be derived from published incident reports, forensic analyses or malware sample collections in your Lab.
+
+LOKI offers a simple way to scan your systems for known IOCs.
+
+It supports these different types of indicators:
+
+MD5 / SHA1 / SHA256 hashes
+Yara Rules (applied to file data and process memory)
+Hard Indicator Filenames based on Regular Expression (e.g. \\pwdump\.exe)
+Soft Indicator Filenames based on Regular Expressions (e.g. Windows\\[\w]\.exe)
+```
 
 
 ## Installation Instructions
