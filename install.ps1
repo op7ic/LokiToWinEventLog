@@ -10,7 +10,7 @@ If(!(test-path $Loki2WindowsEventLogging)) {
   New-Item -ItemType Directory -Force -Path $Loki2WindowsEventLogging
 }
 
-Set-Location -Path $Loki2WindowsEventLogDir
+Set-Location -Path $Loki2WindowsEventLogDir\loki
 $lokizipPath = "$Loki2WindowsEventLogDir\loki.zip"
 if(!(test-path $lokizipPath)) {
   # Requires TLS 1.2
@@ -28,7 +28,7 @@ if (! $logfileExists) {
 }
 
 $Loki2WindowsEventLogDir = "$env:ProgramFiles\Loki2WindowsEventLog"
-Set-Location -Path $Loki2WindowsEventLogDir
+Set-Location -Path $Loki2WindowsEventLogDir\loki
 $Loki2WindowsEventLogging = "$Loki2WindowsEventLogDir\logs"
 $lokibin = "$Loki2WindowsEventLogDir\loki\loki.exe"
 $lokiupgrader = "$Loki2WindowsEventLogDir\loki\loki-upgrader.exe"
