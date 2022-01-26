@@ -10,7 +10,7 @@ If(!(test-path $Loki2WindowsEventLogging)) {
   New-Item -ItemType Directory -Force -Path $Loki2WindowsEventLogging
 }
 
-Set-Location -Path $Loki2WindowsEventLogDir\loki
+
 $lokizipPath = "$Loki2WindowsEventLogDir\loki.zip"
 if(!(test-path $lokizipPath)) {
   # Requires TLS 1.2
@@ -18,7 +18,7 @@ if(!(test-path $lokizipPath)) {
   Invoke-WebRequest -Uri "https://github.com/Neo23x0/Loki/releases/download/v0.44.2/loki_0.44.2.zip" -OutFile "$lokizipPath"
 }
 Expand-Archive -Path $lokizipPath -DestinationPath $Loki2WindowsEventLogDir -Force
-
+Set-Location -Path $Loki2WindowsEventLogDir\loki
 $codebuffer = @'
 # Author: Jerzy 'Yuri' Kramarz
 # Setup our event log so Loki CSV events can go there directly. Ignore if already exist
