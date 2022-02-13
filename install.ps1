@@ -1,4 +1,10 @@
-# Author: Jerzy 'Yuri' Kramarz
+############################################################
+# Author      : Jerzy 'Yuri' Kramarz (op7ic)               #
+# Version     : 1.0                                        #
+# Type        : PowerShell                                 #
+# Description : Loki2WinEVTX. See README.md for details    # 
+############################################################
+
 # Create Program Files directories
 $Loki2WindowsEventLogDir = "$env:ProgramFiles\Loki2WindowsEventLog"
 $Loki2WindowsEventLogging = "$Loki2WindowsEventLogDir\logs"
