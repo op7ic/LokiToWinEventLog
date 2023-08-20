@@ -21,7 +21,7 @@ $lokizipPath = "$Loki2WindowsEventLogDir\loki.zip"
 if(!(test-path $lokizipPath)) {
   # Requires TLS 1.2
   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-  Invoke-WebRequest -Uri "https://github.com/Neo23x0/Loki/releases/download/v0.44.2/loki_0.44.2.zip" -OutFile "$lokizipPath"
+  Invoke-WebRequest -Uri "https://github.com/Neo23x0/Loki/releases/download/v0.51.0/loki_0.51.0.zip" -OutFile "$lokizipPath"
 }
 Expand-Archive -Path $lokizipPath -DestinationPath $Loki2WindowsEventLogDir -Force
 Set-Location -Path $Loki2WindowsEventLogDir\loki
